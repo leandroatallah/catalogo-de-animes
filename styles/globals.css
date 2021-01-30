@@ -14,3 +14,32 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+body {
+  background-color: #1F2222;
+  color: #fff;
+}
+.container {
+  max-width: 1504px;
+  margin: 0 auto;
+}
+header {
+  background-color: #1A232E;
+}
+header .ant-row {
+  height: 72px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav ul li a {
+  display: block;
+}

@@ -8,8 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-less": "^1.0.1",
+    "antd": "^4.11.2",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "less": "^4.1.0",
+    "less-loader": "^7.3.0",
+    "style-loader": "^2.0.0"
   }
 }
