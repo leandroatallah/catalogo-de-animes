@@ -1,0 +1,38 @@
+.single-wrapper {
+    margin: 60px 0;
+
+    .meta-info {
+        ul {
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: inline-block;
+                font-size: 24px;
+                font-weight: 500;
+
+                &:after {
+                    content: '·';
+                    display: inline-block;
+                    margin: 0 12px;
+                }
+                &:last-child:after {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    .watch-trailer {
+        border-radius: 4px 4px 0 0;
+    }
+
+    .description {
+        font-size: 20px;
+        color: #fff;
+        font-weight: 400;
+        letter-spacing: .25px;
+        line-height: 1.6;
+    }
+}

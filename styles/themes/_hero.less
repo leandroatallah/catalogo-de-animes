@@ -1,0 +1,85 @@
+.banner-hero {
+    position: relative;
+    background-size: 0;
+    background-color: #000;
+    margin-bottom: -100px;
+
+    @media (max-width: 738px) {
+        display: none;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: .7;
+        z-index: 10;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        background-image: linear-gradient(transparent, @body-background);
+        z-index: 15;
+    }
+
+    & > .container {
+        height: 720px;
+        display: flex;
+        align-items: center;
+    }
+    
+    &--slim {
+        .container {
+            height: 340px;
+        }
+    }
+
+    &__caption {
+        font-size: 24px;
+        line-height: 1.4;
+        font-weight: 500;
+        width: 50%;
+        z-index: 20;
+        
+        @media (max-width: 1170px) {
+            width: 100%;
+        }
+
+        & > * {
+            text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+        }
+
+        h1 {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1;
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+    }
+
+    &__button {
+        font-weight: 500;
+        letter-spacing: .5px;
+    }
+
+    .section-title {
+        position: relative;
+        width: 100%;
+        font-size: 48px;
+        border-bottom: 0;
+        z-index: 90;
+    }
+}

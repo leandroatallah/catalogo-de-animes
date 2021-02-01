@@ -1,0 +1,84 @@
+@header-height: 72px;
+
+.site-header {
+    @media (max-width: 600px) {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__row {
+        height: @header-height;
+    }
+
+    nav {
+        & > ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+            height: @header-height;
+
+            & > li {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 20px;
+                height: 100%;
+
+                a {
+                    display: block;
+                    font-size: 1.2rem;
+                    color: #fff;
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    position: absolute;
+                    top: calc(100% - 1px);
+                    left: 0;
+                    pointer-events: none;
+                    opacity: 0;
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    padding: 20px 10px;
+                    background-color: #000;
+                    border-top: 1px solid #444;
+                    z-index: 200;
+                    transition: .25s all ease;
+
+                    li {
+                        display: inline-block;
+                        margin: 0 8px;
+
+                        a {
+                            font-size: 16px;
+                            color: fade(#fff, 90%);
+                            padding: 4px;
+                            letter-spacing: .5px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                &:hover {
+                    border-bottom: 6px solid @primary-color;
+
+                    ul {
+                        opacity: 1;
+                        pointer-events: initial;
+                    }
+                }
+            }
+        }
+    }
+
+    &__search-input {
+        button {
+            font-size: 18px;
+            padding: 0 10px;
+        }
+    }
+}
