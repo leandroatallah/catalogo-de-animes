@@ -22,14 +22,11 @@
         }
 
         & > li {
-            flex: 0 0 calc(100vw - (100vw - 100%));
+            // flex: 0 0 calc(100vw - (100vw - 100%));
+            flex: 0 0 calc((100vw - (100vw - 100%)) / 2 - 20px);
             transition: transform 300ms ease 100ms;
             display: inline-block;
             margin-right: 10px;
-
-            @media (min-width: 600px) {
-                flex: 0 0 calc((100vw - (100vw - 100%)) / 2 - 10px);
-            }
 
             @media (min-width: 900px) {
                 flex: 0 0 calc((100vw - (100vw - 100%)) / 3 - 10px);
@@ -64,7 +61,7 @@
             pointer-events: none;
             padding: 20px 15px;
             white-space: initial;
-            display: flex;
+            display: none;
             flex-direction: column;
             position: absolute;
             top: 0;
@@ -74,6 +71,10 @@
             background-color: fade(@body-background, 80%);
             z-index: 90;
             transition: .25s .1s all ease-out;
+
+            @media (min-width: 600px) {
+                display: flex;
+            }
 
             h4 {
                 font-size: 16px;
@@ -149,20 +150,22 @@
         }
 
         &:hover {
-            .description-overlay {
-                opacity: 1;
-                transition: .25s 0s all ease-out;
-            }
+            @media (min-width: 600px) {
+                .description-overlay {
+                    opacity: 1;
+                    transition: .25s 0s all ease-out;
+                }
 
-            img {
-                transform: scale(1.1);
-                filter: blur(2px);
-                transition: .25s 0 all ease, .5s transform ease;
-            }
+                img {
+                    transform: scale(1.1);
+                    filter: blur(2px);
+                    transition: .25s 0 all ease, .5s transform ease;
+                }
 
-            .more-info {
-                opacity: 1;
-                transform: translateY(0);
+                .more-info {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
         }
 
@@ -194,6 +197,11 @@
             height: 100%;
             pointer-events: none;
             z-index: 100;
+            display: none;
+
+            @media (min-width: 600px) {
+                display: block;
+            }
     
             .arrow-button {
                 pointer-events: initial;
