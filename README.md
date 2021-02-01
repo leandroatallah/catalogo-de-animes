@@ -10,7 +10,7 @@ All the content was made fetching [Kitsu API](https://kitsu.docs.apiary.io/).
 
 ## Guide
 
-- Clone this repository
+- Clone this repository `git clone git@github.com:leandroatallah/catalogo-de-animes.git`
 
 ## Commands
 
